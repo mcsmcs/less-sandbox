@@ -9,18 +9,15 @@
 }
 .nav-item:hover {
   background-color: red;
-  width: 250px;
 }
 .nav-item .nav-item-icon {
   background-color: blue;
   height: 50px;
-  width: 50px;
+  min-width: 50px;
 }
 .nav-item:hover .nav-item-icon {
   position: relative;
   background-color: green;
-  width: 250px;
-  overflow: hidden;
 }
 .nav-item:active .nav-item-icon {
   background-color: yellow;
@@ -29,11 +26,13 @@
   display: none;
 }
 .nav-item:hover .nav-item-label {
-  display: block;
-  /* vertical center */
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  display: block;
   padding: 0 10px 0 60px;
+  background-color: green;
   text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 50px;
 }
