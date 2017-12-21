@@ -1,0 +1,39 @@
+.nav-list {
+  width: 50px;
+  height: 100vh;
+  background-color: gray;
+}
+.nav-item {
+  background-color: orangered;
+  height: 50px;
+}
+.nav-item:hover {
+  background-color: red;
+  width: 250px;
+}
+.nav-item .nav-item-icon {
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+}
+.nav-item:hover .nav-item-icon {
+  position: relative;
+  background-color: green;
+  width: 250px;
+  overflow: hidden;
+}
+.nav-item:active .nav-item-icon {
+  background-color: yellow;
+}
+.nav-item-label {
+  display: none;
+}
+.nav-item:hover .nav-item-label {
+  display: block;
+  /* vertical center */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px 0 60px;
+  text-transform: uppercase;
+}

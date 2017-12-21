@@ -1,0 +1,54 @@
+@nav-width: 50px;
+@label-pad-left: @nav-width + 10;
+@expanded-icon-width: 250px;
+
+.nav-list {
+  width: @nav-width;
+  height: 100vh;
+  background-color: gray;
+}
+
+.nav-item {
+  background-color: orangered;
+  height: 50px;
+
+  &:hover {
+    background-color: red;
+    width: @expanded-icon-width;
+  }
+
+  ////////////////////////////// Icon
+  .nav-item-icon {
+    background-color: blue;
+    height: 50px;
+    width: @nav-width;
+  }
+  
+  &:hover .nav-item-icon {
+    position: relative;
+    background-color: green;
+    width: @expanded-icon-width;
+    overflow: hidden;
+  }
+
+  &:active .nav-item-icon {
+    background-color: yellow;
+  }
+
+  ////////////////////////////// Label
+  &-label {
+    display: none;
+  }
+  
+  &:hover &-label {
+    display: block;
+    
+    /* vertical center */
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    
+    padding: 0 10px 0 @label-pad-left;
+    text-transform: uppercase;
+  }
+}
