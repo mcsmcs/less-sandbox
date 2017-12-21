@@ -1,0 +1,18 @@
+{
+  "name": "less-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve .",
+    "compile": "less-watch-compiler less . main.less"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^2.7.3",
+    "less-watch-compiler": "^1.10.0"
+  }
+}
