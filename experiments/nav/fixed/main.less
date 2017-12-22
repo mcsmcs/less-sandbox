@@ -14,21 +14,18 @@
 
   &:hover {
     background-color: red;
-    width: @expanded-icon-width;
   }
 
   ////////////////////////////// Icon
   .nav-item-icon {
     background-color: blue;
     height: 50px;
-    width: @nav-width;
+    min-width: @nav-width;
   }
   
   &:hover .nav-item-icon {
     position: relative;
     background-color: green;
-    width: @expanded-icon-width;
-    overflow: hidden;
   }
 
   &:active .nav-item-icon {
@@ -41,14 +38,14 @@
   }
   
   &:hover &-label {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    
-    /* vertical center */
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-    
     padding: 0 10px 0 @label-pad-left;
+    background-color: green;
     text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 50px;
   }
 }
