@@ -1,0 +1,51 @@
+@nav-width: 50px;
+@label-pad-left: @nav-width + 10;
+@expanded-icon-width: 250px;
+
+.nav-list {
+  width: @nav-width;
+  height: 100vh;
+  background-color: gray;
+}
+
+.nav-item {
+  background-color: orangered;
+  height: 50px;
+
+  &:hover {
+    background-color: red;
+  }
+
+  ////////////////////////////// Icon
+  .nav-item-icon {
+    background-color: blue;
+    height: 50px;
+    min-width: @nav-width;
+  }
+  
+  &:hover .nav-item-icon {
+    position: relative;
+    background-color: green;
+  }
+
+  &:active .nav-item-icon {
+    background-color: yellow;
+  }
+
+  ////////////////////////////// Label
+  &-label {
+    display: none;
+  }
+  
+  &:hover &-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 0 10px 0 @label-pad-left;
+    background-color: green;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 50px;
+  }
+}
