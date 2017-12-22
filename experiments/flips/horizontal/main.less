@@ -1,0 +1,57 @@
+@cardHeight: 30rem;
+@color-white: orangered;
+@color-gray: lightblue;
+
+.container {
+  width: 15rem;
+  margin: 10rem auto 0;
+}
+
+.card {
+  position: relative;
+  height: @cardHeight;
+
+  // this causes the card to 'pop out'
+  // and maintain a 3D effect
+  // smaller = more pop
+  // high = 'flatter'
+  perspective: 80rem;
+  -moz-perspective: 80rem;
+
+  &__side {
+    // make the cards occupy the same space
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: @cardHeight;
+    width: 100%;
+
+    // hide things that are facing 'away'
+    backface-visibility: hidden;
+
+    transition: all 2s ease;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0, 0.15);
+    // border-radius: 3px;
+
+    &--front {
+      background-color: @color-white;
+    }
+  
+    &--back {
+      // the default state should be 'flipped' backward
+      transform: rotateY(180deg);
+      background-color: @color-gray;
+    }
+  }
+
+  // rotate on hover
+  &:hover &__side--front {
+    // 0-->-180 clock-wise
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    // -180-->0 clock-wise
+    transform: rotateY(0);
+  }
+}

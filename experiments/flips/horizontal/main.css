@@ -1,0 +1,33 @@
+.container {
+  width: 15rem;
+  margin: 10rem auto 0;
+}
+.card {
+  position: relative;
+  height: 30rem;
+  perspective: 80rem;
+  -moz-perspective: 80rem;
+}
+.card__side {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30rem;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: all 2s ease;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: orangered;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+  background-color: lightblue;
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
